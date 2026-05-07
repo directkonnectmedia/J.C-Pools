@@ -17,14 +17,14 @@ export function BrandMark({ variant = "header", className = "" }: Props) {
       <CompanyLogo variant={variant} />
       <div className={`min-w-0 text-center ${isHero ? "sm:text-left" : ""}`}>
         <p
-          className={`font-semibold tracking-tight ${
+          className={`tracking-tight ${
             onLight
               ? "text-slate-900"
               : "text-white drop-shadow-md"
           } ${
             isHero
-              ? "font-[family-name:var(--font-display)] text-[clamp(1.75rem,6vw,3.25rem)] leading-tight"
-              : "font-[family-name:var(--font-display)] text-lg sm:text-xl leading-snug"
+              ? "font-[family-name:var(--font-display)] text-[clamp(2.125rem,7.5vw,4.25rem)] font-bold leading-[1.06]"
+              : "font-[family-name:var(--font-display)] text-lg font-semibold sm:text-xl leading-snug"
           }`}
         >
           {COMPANY.name}
@@ -36,7 +36,7 @@ export function BrandMark({ variant = "header", className = "" }: Props) {
             Remodeling
           </p>
         ) : (
-          <p className="mt-3 max-w-xl text-base text-white/90 drop-shadow sm:text-lg">
+          <p className="relative z-10 mt-3 max-w-xl text-base font-semibold text-white/95 drop-shadow-md sm:text-lg">
             {COMPANY.tagline}
           </p>
         )}
