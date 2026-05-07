@@ -8,6 +8,7 @@ type Props = {
 
 export function BrandMark({ variant = "header", className = "" }: Props) {
   const isHero = variant === "hero";
+  const onLight = variant === "header";
 
   return (
     <div
@@ -16,7 +17,11 @@ export function BrandMark({ variant = "header", className = "" }: Props) {
       <CompanyLogo variant={variant} />
       <div className={`min-w-0 text-center ${isHero ? "sm:text-left" : ""}`}>
         <p
-          className={`font-semibold tracking-tight text-white drop-shadow-md ${
+          className={`font-semibold tracking-tight ${
+            onLight
+              ? "text-slate-900"
+              : "text-white drop-shadow-md"
+          } ${
             isHero
               ? "font-[family-name:var(--font-display)] text-[clamp(1.75rem,6vw,3.25rem)] leading-tight"
               : "font-[family-name:var(--font-display)] text-lg sm:text-xl leading-snug"
@@ -25,7 +30,9 @@ export function BrandMark({ variant = "header", className = "" }: Props) {
           {COMPANY.name}
         </p>
         {!isHero ? (
-          <p className="hidden text-[11px] font-medium uppercase tracking-[0.2em] text-cyan-100/90 sm:block">
+          <p
+            className={`hidden text-[11px] font-medium uppercase tracking-[0.2em] sm:block ${onLight ? "text-sky-700" : "text-cyan-100/90"}`}
+          >
             Remodeling
           </p>
         ) : (

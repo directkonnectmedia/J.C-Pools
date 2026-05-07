@@ -12,6 +12,8 @@ html {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Nav, gallery, contact sections */
+  --color-surface-baby-blue: #d6eef9;
   --font-sans: var(--font-body);
 }
 

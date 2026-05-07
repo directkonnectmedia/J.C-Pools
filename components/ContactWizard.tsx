@@ -125,38 +125,44 @@ export function ContactWizard() {
     <>
       <section
         id="contact"
-        className="scroll-mt-[72px] bg-slate-950 py-20 sm:py-28"
+        className="scroll-mt-[72px] bg-surface-baby-blue py-20 sm:py-28"
       >
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <header className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400/90">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-700">
               Contact
             </p>
-            <h2 className="mt-3 font-[family-name:var(--font-display)] text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-white">
+            <h2 className="mt-3 font-[family-name:var(--font-display)] text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-slate-900">
               Tell us about your project
             </h2>
-            <p className="mt-4 text-base text-slate-400">
+            <p className="mt-4 text-base text-slate-600">
               Three quick steps — timeline, services, and your details.
             </p>
           </header>
 
-          <div className="mt-10 rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-xl shadow-black/30 sm:p-10">
+          <div className="mt-10 rounded-3xl border border-sky-200/90 bg-white/80 p-6 shadow-lg shadow-sky-900/15 backdrop-blur-sm sm:p-10">
             <ol className="flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-500 sm:text-sm">
-              <li className={step === 0 ? "text-cyan-300" : ""}>1 · Timeline</li>
-              <span aria-hidden className="text-slate-600">
+              <li className={step === 0 ? "font-semibold text-cyan-700" : ""}>
+                1 · Timeline
+              </li>
+              <span aria-hidden className="text-slate-400">
                 —
               </span>
-              <li className={step === 1 ? "text-cyan-300" : ""}>2 · Services</li>
-              <span aria-hidden className="text-slate-600">
+              <li className={step === 1 ? "font-semibold text-cyan-700" : ""}>
+                2 · Services
+              </li>
+              <span aria-hidden className="text-slate-400">
                 —
               </span>
-              <li className={step === 2 ? "text-cyan-300" : ""}>3 · Your info</li>
+              <li className={step === 2 ? "font-semibold text-cyan-700" : ""}>
+                3 · Your info
+              </li>
             </ol>
 
             <div className="mt-10 space-y-6">
               {step === 0 && (
                 <div>
-                  <p className="text-lg font-medium text-white">
+                  <p className="text-lg font-medium text-slate-900">
                     When do you need help?
                   </p>
                   <div className="mt-4 flex flex-col gap-3">
@@ -165,10 +171,10 @@ export function ContactWizard() {
                         key={opt.id}
                         type="button"
                         onClick={() => setTimelineId(opt.id)}
-                        className={`min-h-[48px] rounded-2xl border px-4 py-3 text-left text-base font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
+                        className={`min-h-[48px] rounded-2xl border px-4 py-3 text-left text-base font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 ${
                           timelineId === opt.id
-                            ? "border-cyan-400/70 bg-cyan-500/15 text-white"
-                            : "border-white/10 bg-white/[0.03] text-slate-200 hover:border-white/20"
+                            ? "border-cyan-600 bg-cyan-100 text-slate-900 shadow-sm shadow-cyan-900/10"
+                            : "border-sky-200 bg-white text-slate-800 hover:border-sky-400"
                         }`}
                       >
                         {opt.label}
@@ -180,10 +186,10 @@ export function ContactWizard() {
 
               {step === 1 && (
                 <div>
-                  <p className="text-lg font-medium text-white">
+                  <p className="text-lg font-medium text-slate-900">
                     Which services are you considering?
                   </p>
-                  <p className="mt-1 text-sm text-slate-400">
+                  <p className="mt-1 text-sm text-slate-600">
                     Select any that apply — tap again to deselect.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -194,10 +200,10 @@ export function ContactWizard() {
                           key={s.id}
                           type="button"
                           onClick={() => toggleService(s.id)}
-                          className={`min-h-[44px] rounded-full border px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
+                          className={`min-h-[44px] rounded-full border px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 ${
                             on
-                              ? "border-cyan-400/70 bg-cyan-500/20 text-white"
-                              : "border-white/10 bg-white/[0.03] text-slate-200 hover:border-white/25"
+                              ? "border-cyan-600 bg-cyan-100 text-slate-900 shadow-sm"
+                              : "border-sky-200 bg-white text-slate-800 hover:border-sky-400"
                           }`}
                         >
                           {s.label}
@@ -213,7 +219,7 @@ export function ContactWizard() {
                   <div>
                     <label
                       htmlFor="cw-name"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-slate-700"
                     >
                       Full name
                     </label>
@@ -222,13 +228,13 @@ export function ContactWizard() {
                       autoComplete="name"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      className="mt-2 w-full min-h-[48px] rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-cyan-400/40 focus:ring-2"
+                      className="mt-2 w-full min-h-[48px] rounded-xl border border-sky-200 bg-white px-4 py-3 text-slate-900 outline-none ring-sky-400/50 focus:ring-2"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="cw-email"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-slate-700"
                     >
                       Email
                     </label>
@@ -238,13 +244,13 @@ export function ContactWizard() {
                       autoComplete="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="mt-2 w-full min-h-[48px] rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-cyan-400/40 focus:ring-2"
+                      className="mt-2 w-full min-h-[48px] rounded-xl border border-sky-200 bg-white px-4 py-3 text-slate-900 outline-none ring-sky-400/50 focus:ring-2"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="cw-phone"
-                      className="text-sm font-medium text-slate-300"
+                      className="text-sm font-medium text-slate-700"
                     >
                       Phone number
                     </label>
@@ -254,21 +260,21 @@ export function ContactWizard() {
                       autoComplete="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="mt-2 w-full min-h-[48px] rounded-xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-cyan-400/40 focus:ring-2"
+                      className="mt-2 w-full min-h-[48px] rounded-xl border border-sky-200 bg-white px-4 py-3 text-slate-900 outline-none ring-sky-400/50 focus:ring-2"
                     />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-slate-300">
+                    <p className="text-sm font-medium text-slate-700">
                       Please choose which job you are looking for:
                     </p>
                     <div className="mt-3 grid gap-3 sm:grid-cols-2">
                       <button
                         type="button"
                         onClick={() => setJobType("residential")}
-                        className={`min-h-[48px] rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
+                        className={`min-h-[48px] rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 ${
                           jobType === "residential"
-                            ? "border-cyan-400/70 bg-cyan-500/15 text-white"
-                            : "border-white/10 bg-white/[0.03] text-slate-200 hover:border-white/20"
+                            ? "border-cyan-600 bg-cyan-100 text-slate-900 shadow-sm"
+                            : "border-sky-200 bg-white text-slate-800 hover:border-sky-400"
                         }`}
                       >
                         Residential service job
@@ -276,10 +282,10 @@ export function ContactWizard() {
                       <button
                         type="button"
                         onClick={() => setJobType("commercial")}
-                        className={`min-h-[48px] rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 ${
+                        className={`min-h-[48px] rounded-2xl border px-4 py-3 text-center text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700 ${
                           jobType === "commercial"
-                            ? "border-cyan-400/70 bg-cyan-500/15 text-white"
-                            : "border-white/10 bg-white/[0.03] text-slate-200 hover:border-white/20"
+                            ? "border-cyan-600 bg-cyan-100 text-slate-900 shadow-sm"
+                            : "border-sky-200 bg-white text-slate-800 hover:border-sky-400"
                         }`}
                       >
                         Commercial service job
@@ -290,7 +296,7 @@ export function ContactWizard() {
               )}
 
               {error ? (
-                <p className="rounded-xl border border-rose-500/40 bg-rose-950/40 px-4 py-3 text-sm text-rose-100">
+                <p className="rounded-xl border border-rose-400/70 bg-rose-50 px-4 py-3 text-sm text-rose-900">
                   {error}
                 </p>
               ) : null}
@@ -303,7 +309,7 @@ export function ContactWizard() {
                       setError(null);
                       setStep((s) => s - 1);
                     }}
-                    className="inline-flex min-h-[48px] min-w-[44px] items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+                    className="inline-flex min-h-[48px] min-w-[44px] items-center justify-center rounded-full border border-sky-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:bg-sky-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-700"
                   >
                     Back
                   </button>
@@ -315,17 +321,17 @@ export function ContactWizard() {
                     if (step < 2) setStep((s) => s + 1);
                     else submitWizard();
                   }}
-                  className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 px-8 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:flex-none"
+                  className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 px-8 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-600/25 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-800 sm:flex-none"
                 >
                   {step === 2 ? "Submit" : "Next"}
                 </button>
               </div>
 
-              <p className="text-xs leading-relaxed text-slate-500">
+              <p className="text-xs leading-relaxed text-slate-600">
                 {/* Hook for future Formspree / API — set NEXT_PUBLIC_CONTACT_EMAIL for mailto &quot;to&quot; */}
                 Prefer phone? Call{" "}
                 <a
-                  className="text-cyan-400 underline-offset-2 hover:underline"
+                  className="font-medium text-cyan-700 underline-offset-2 hover:underline"
                   href={COMPANY.phoneTel}
                 >
                   {COMPANY.phoneDisplay}
