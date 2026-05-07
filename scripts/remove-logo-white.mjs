@@ -7,9 +7,9 @@ import { rename, unlink } from "fs/promises";
 import { join } from "path";
 
 const root = process.cwd();
-const rel = join("public", "logo-chicago-pool-services.png");
+const rel = join("public", "logo-jc-pools.png");
 const inputPath = join(root, rel);
-const tmpPath = join(root, "public", "logo-chicago-pool-services.tmp.png");
+const tmpPath = join(root, "public", "logo-jc-pools.tmp.png");
 
 const { data, info } = await sharp(inputPath)
   .ensureAlpha()

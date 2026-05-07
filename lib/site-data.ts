@@ -7,8 +7,11 @@ export const COMPANY = {
   area: "Phoenix, Arizona and surrounding communities",
 } as const;
 
-/** Badge logo — transparent PNG in `public/` (re-run `npm run logo:knockout-white` after replacing source). */
-export const COMPANY_LOGO_SRC = "/logo-chicago-pool-services.png?v=nobg";
+/** Logo: default file in `public/logo-jc-pools.png`. Override with NEXT_PUBLIC_COMPANY_LOGO_SRC (https URL). */
+export const COMPANY_LOGO_SRC =
+  (typeof process !== "undefined" &&
+    process.env.NEXT_PUBLIC_COMPANY_LOGO_SRC?.trim()) ||
+  "/logo-jc-pools.png?v=nobg";
 
 export type ServiceSlide = {
   id: string;

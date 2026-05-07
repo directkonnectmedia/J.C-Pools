@@ -1,4 +1,5 @@
 import { COMPANY } from "@/lib/site-data";
+import { CompanyLogo } from "./CompanyLogo";
 
 const FOOTER_LINKS = [
   { href: "#services", label: "Services" },
@@ -12,15 +13,21 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-slate-950 text-slate-200">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
         <div>
-          <p className="font-[family-name:var(--font-display)] text-xl font-semibold text-white">
-            {COMPANY.name}
-          </p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-400">
-            {COMPANY.tagline}
-          </p>
-          <p className="mt-4 text-sm text-slate-400">
-            <span className="text-slate-500">Service area:</span> {COMPANY.area}
-          </p>
+          <div className="flex items-start gap-3">
+            <CompanyLogo variant="footer" className="mt-0.5" />
+            <div className="min-w-0">
+              <p className="font-[family-name:var(--font-display)] text-xl font-semibold text-white">
+                {COMPANY.name}
+              </p>
+              <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-400">
+                {COMPANY.tagline}
+              </p>
+              <p className="mt-4 text-sm text-slate-400">
+                <span className="text-slate-500">Service area:</span>{" "}
+                {COMPANY.area}
+              </p>
+            </div>
+          </div>
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
