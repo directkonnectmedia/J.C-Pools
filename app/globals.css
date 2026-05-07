@@ -16,8 +16,8 @@ html {
   --color-foreground: var(--foreground);
   /* Nav, gallery, contact sections */
   --color-surface-baby-blue: #d6eef9;
-  /* Solid midpoint of hero CTA gradient (cyan-400 → sky-500) */
-  --color-hero-cta-blue: #18bcec;
+  /* Lighter tint aligned with hero CTA blues (services / reviews / footer) */
+  --color-hero-cta-blue: #b8eefd;
   --font-sans: var(--font-body);
 }
 
@@ -25,9 +25,31 @@ html {
   html {
     scroll-behavior: auto;
   }
+
+  .hero-overlay-blue-pulse {
+    animation: none;
+    opacity: 0.26;
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Hero: light blue tint over photo — subtle opacity pulse */
+@keyframes hero-overlay-blue-pulse {
+  0%,
+  100% {
+    opacity: 0.16;
+  }
+  50% {
+    opacity: 0.32;
+  }
+}
+
+.hero-overlay-blue-pulse {
+  animation: hero-overlay-blue-pulse 6s ease-in-out infinite;
+  box-shadow: inset 0 0 160px 100px rgb(186 230 253 / 0.38);
+  will-change: opacity;
 }

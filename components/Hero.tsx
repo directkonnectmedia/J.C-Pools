@@ -20,7 +20,11 @@ export function Hero() {
           className="object-cover object-center opacity-[0.92]"
         />
       </div>
-      <div className="pointer-events-none absolute inset-0 -z-[5] bg-gradient-to-b from-slate-950/70 via-slate-950/45 to-slate-950/85" />
+      <div
+        className="hero-overlay-blue-pulse pointer-events-none absolute inset-0 -z-[8] bg-gradient-to-b from-sky-300/55 via-cyan-200/40 to-sky-400/50"
+        aria-hidden
+      />
+      <div className="pointer-events-none absolute inset-0 -z-[5] bg-gradient-to-b from-slate-950/52 via-slate-950/32 to-slate-950/62" />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 py-20 sm:px-8">
         <BrandMark variant="hero" className="mx-auto drop-shadow-xl sm:mx-0" />
