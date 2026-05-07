@@ -15,7 +15,7 @@ const bodySans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${COMPANY.name} | Pool remodeling Chicago`,
+  title: `${COMPANY.name} | Pool remodeling Phoenix, Arizona`,
   description: COMPANY.tagline,
 };
 

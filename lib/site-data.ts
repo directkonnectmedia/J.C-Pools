@@ -1,9 +1,10 @@
 export const COMPANY = {
-  name: "Chicago Pool Service LLC",
-  phoneDisplay: "(602) 694-5821",
-  phoneTel: "tel:+16026945821",
-  tagline: "Elegant pool remodeling, refinishing, and care across Greater Chicago.",
-  area: "Greater Chicago & surrounding communities",
+  name: "J.C Pools",
+  phoneDisplay: "480-492-7133",
+  phoneTel: "tel:+14804927133",
+  tagline:
+    "Elegant pool remodeling, refinishing, and care across Phoenix, Arizona.",
+  area: "Phoenix, Arizona and surrounding communities",
 } as const;
 
 /** Badge logo — transparent PNG in `public/` (re-run `npm run logo:knockout-white` after replacing source). */
@@ -163,7 +164,7 @@ export const TESTIMONIALS = [
   {
     id: "t1",
     name: "Jordan M.",
-    location: "Oak Park",
+    location: "Scottsdale",
     quote:
       "Our replaster and tile refresh exceeded expectations. The crew was professional and the pool looks brand new.",
     rating: 5,
@@ -171,7 +172,7 @@ export const TESTIMONIALS = [
   {
     id: "t2",
     name: "Priya S.",
-    location: "Naperville",
+    location: "Mesa",
     quote:
       "Clear communication from quote to completion. The pebble finish and new deck transformed our backyard.",
     rating: 5,
@@ -179,7 +180,7 @@ export const TESTIMONIALS = [
   {
     id: "t3",
     name: "Marcus T.",
-    location: "Chicago",
+    location: "Phoenix",
     quote:
       "They handled equipment upgrades and lighting fast. Water clarity has never been better.",
     rating: 5,
@@ -187,7 +188,7 @@ export const TESTIMONIALS = [
   {
     id: "t4",
     name: "Elena R.",
-    location: "Evanston",
+    location: "Chandler",
     quote:
       "Commercial property remodel was seamless — minimal downtime and a stunning result for our residents.",
     rating: 5,

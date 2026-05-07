@@ -12,7 +12,7 @@ export function Testimonials() {
             Reviews
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-display)] text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-white">
-            Trusted by Chicagoland homeowners & properties
+            Trusted by Phoenix-area homeowners & properties
           </h2>
         </header>
 
