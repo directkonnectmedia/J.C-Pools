@@ -56,15 +56,15 @@ body {
   will-change: opacity;
 }
 
-/* Hero lockup: radial glow using services-section blue, fades toward edges */
+/* Hero lockup: single radial layer behind logo + titles; sized via inset on element */
 .hero-brand-radial-glow {
-  border-radius: 50%;
+  border-radius: 3rem;
   background: radial-gradient(
-    ellipse 92% 88% at 50% 50%,
+    ellipse 100% 94% at 50% 46%,
     color-mix(in srgb, var(--hero-section-blue) 82%, transparent) 0%,
-    color-mix(in srgb, var(--hero-section-blue) 48%, transparent) 46%,
-    color-mix(in srgb, var(--hero-section-blue) 18%, transparent) 68%,
+    color-mix(in srgb, var(--hero-section-blue) 48%, transparent) 44%,
+    color-mix(in srgb, var(--hero-section-blue) 18%, transparent) 66%,
     transparent 88%
   );
-  filter: blur(46px);
+  filter: blur(52px);
 }

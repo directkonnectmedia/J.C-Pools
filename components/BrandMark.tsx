@@ -12,10 +12,21 @@ export function BrandMark({ variant = "header", className = "" }: Props) {
 
   return (
     <div
-      className={`flex items-center gap-3 ${isHero ? "flex-col sm:flex-row sm:gap-5" : ""} ${className}`}
+      className={`relative isolate flex items-center gap-3 ${isHero ? "flex-col sm:flex-row sm:gap-5" : ""} ${className}`}
     >
-      <CompanyLogo variant={variant} />
-      <div className={`min-w-0 text-center ${isHero ? "sm:text-left" : ""}`}>
+      {isHero ? (
+        <div
+          className="hero-brand-radial-glow pointer-events-none absolute z-0 -inset-x-[clamp(1.75rem,10vw,5rem)] -top-[clamp(2rem,8vw,4.25rem)] -bottom-[clamp(3rem,10vw,5.5rem)] sm:-inset-x-[clamp(3rem,12vw,6rem)] sm:-top-[clamp(2.25rem,6vw,3.75rem)] sm:-bottom-[clamp(2.75rem,7vw,4.5rem)]"
+          aria-hidden
+        />
+      ) : null}
+      <CompanyLogo
+        variant={variant}
+        className={isHero ? "relative z-10" : ""}
+      />
+      <div
+        className={`relative z-10 min-w-0 text-center ${isHero ? "sm:text-left" : ""}`}
+      >
         <p
           className={`tracking-tight ${
             onLight
@@ -36,7 +47,7 @@ export function BrandMark({ variant = "header", className = "" }: Props) {
             Remodeling
           </p>
         ) : (
-          <p className="relative z-10 mt-3 max-w-xl text-base font-semibold text-white/95 drop-shadow-md sm:text-lg">
+          <p className="mt-3 max-w-xl text-base font-semibold text-white/95 drop-shadow-md sm:text-lg">
             {COMPANY.tagline}
           </p>
         )}

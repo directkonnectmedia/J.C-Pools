@@ -27,13 +27,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 -z-[5] bg-gradient-to-b from-slate-950/52 via-slate-950/32 to-slate-950/62" />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 py-20 sm:px-8">
-        <div className="relative isolate mx-auto w-fit max-w-full sm:mx-0">
-          <div
-            className="hero-brand-radial-glow pointer-events-none absolute left-1/2 top-[48%] z-0 h-[min(28rem,56vh)] w-[min(38rem,94vw)] -translate-x-1/2 -translate-y-1/2 sm:top-1/2"
-            aria-hidden
-          />
-          <BrandMark variant="hero" className="relative z-10 drop-shadow-xl" />
-        </div>
+        <BrandMark variant="hero" className="mx-auto drop-shadow-xl sm:mx-0" />
         <div className="mt-10 flex flex-wrap justify-center gap-4 sm:justify-start">
           <a
             href="#contact"
