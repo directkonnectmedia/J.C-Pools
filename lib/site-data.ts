@@ -11,7 +11,7 @@ export const COMPANY = {
 export const COMPANY_LOGO_SRC =
   (typeof process !== "undefined" &&
     process.env.NEXT_PUBLIC_COMPANY_LOGO_SRC?.trim()) ||
-  "/logo-jc-pools.png?v=nobg";
+  "/logo-jc-pools.png?v=jc-brand";
 
 export type ServiceSlide = {
   id: string;
