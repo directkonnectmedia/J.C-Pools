@@ -27,7 +27,8 @@ export function Hero() {
         <div className="mt-10 flex flex-wrap justify-center gap-4 sm:justify-start">
           <a
             href="#contact"
-            className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 px-8 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            style={{ backgroundImage: "var(--hero-cta-gradient)" }}
+            className="inline-flex min-h-[48px] items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             Get a quote
           </a>

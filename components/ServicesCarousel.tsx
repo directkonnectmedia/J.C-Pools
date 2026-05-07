@@ -69,17 +69,17 @@ export function ServicesCarousel() {
   return (
     <section
       id="services"
-      className="scroll-mt-[72px] bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-20 sm:py-28"
+      className="scroll-mt-[72px] bg-hero-cta-blue py-20 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <header className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400/90">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-900/85">
             Services
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-display)] text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-white">
+          <h2 className="mt-3 font-[family-name:var(--font-display)] text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-slate-950">
             Remodeling expertise for every detail
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-400">
+          <p className="mt-4 text-base leading-relaxed text-slate-800">
             Explore our core offerings — each card highlights how we elevate your
             pool.
           </p>

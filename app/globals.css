@@ -3,6 +3,8 @@
 :root {
   --background: #020617;
   --foreground: #f8fafc;
+  /* Hero primary CTA: matches Tailwind from-cyan-400 to-sky-500 */
+  --hero-cta-gradient: linear-gradient(to right, #22d3ee, #0ea5e9);
 }
 
 html {
@@ -14,6 +16,8 @@ html {
   --color-foreground: var(--foreground);
   /* Nav, gallery, contact sections */
   --color-surface-baby-blue: #d6eef9;
+  /* Solid midpoint of hero CTA gradient (cyan-400 → sky-500) */
+  --color-hero-cta-blue: #18bcec;
   --font-sans: var(--font-body);
 }
 
